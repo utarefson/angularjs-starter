@@ -2,26 +2,26 @@ angular
   .module('loginModule')
   .component('loginComponent', {   // Use camelcase
     templateUrl: 'app/login/login.html',
-    controller: function () {//courseService
+    controller: function ($state, loginService) {
         console.log('Running Controller of LoginComponent');
-/*
+
         var _this = this;
-        _this.students = [];
+        _this.user = {};
 
-        var promise = courseService.getStudents();
-        promise.then(function(result){
-            console.log('Result', result);
-            _this.students = result;
-        }).catch(function(error){
-            console.log('Error Found:', error);
-            _this.courseServiceError = {
-                status: error.status,
-                statusText: error.statusText
-            };
-        }).finally(function(){
-            console.log('getStudents has been finished!');
-        });
+        _this.loginFunction = function() {
+            console.log("LoginFunction()");
+            console.log(_this.user);
 
-        console.log('Test Async');*/
+            var promise = loginService.loginUser(_this.user);
+            promise.then(function(result){
+                console.log('loginUser() - Result', result);
+                $state.go('CategoryPage');
+            }).catch(function(error){
+                console.log('loginUser() - Error Found:', error);
+                alert('Incorrect username or password!');
+            }).finally(function(){
+                console.log('loginUser() has been finished!');
+            });
+        }
     }
   });

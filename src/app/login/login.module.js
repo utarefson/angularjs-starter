@@ -1,2 +1,2 @@
 angular
-    .module('loginModule', []);
+    .module('loginModule', ['ngResource']);
