@@ -1,5 +1,5 @@
 angular
-  .module('app')
+  .module('appModule')
   .config(routesConfig);
 
 /** @ngInject */
@@ -8,8 +8,13 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('app', {
-      url: '/',
-      component: 'app'
-    });
+    .state('StartPage', {
+        url: '/',
+        redirectTo: 'LoginPage'
+    })
+    .state('LoginPage', {
+        parent: 'StartPage',
+        url: 'login',
+        component: 'loginComponent'
+    })
 }

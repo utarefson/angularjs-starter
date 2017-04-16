@@ -1,14 +1,14 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "username": "roberto.perez@gmail.com",
-            "password": "roberto"
-		},
-        {
-            "id": 2,
-            "username": "maria.lopez@gmail.com",
-            "password": "maria"
-		}
-	] 
+  "users": [
+    {
+      "username": "roberto.perez@gmail.com",
+      "password": "roberto",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "username": "maria.lopez@gmail.com",
+      "password": "maria"
+    }
+  ]
 }
