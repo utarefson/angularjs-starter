@@ -1,3 +1,10 @@
 <header> 
-    <h2>Category Menu</h2>
+    <ul class="slideuptabs">
+        <li
+            ng-repeat="category in $ctrl.categories">
+            <a ui-sref="CategoryPage({categoryId: {{category.id}}})">
+                <span>{{category.category}}</span>
+            </a>
+        </li>
+    </ul>
 </header>

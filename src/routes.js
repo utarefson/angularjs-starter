@@ -13,7 +13,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
         component: 'loginComponent'
     })
     .state('CategoryPage', {
-        url: '/categories',
+        url: '/categories/:categoryId',
         templateUrl: 'app/category/category.html',
         controller: 'categoryController',
         controllerAs: 'categoryX'

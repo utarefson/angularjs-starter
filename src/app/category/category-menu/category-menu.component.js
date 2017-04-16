@@ -11,7 +11,7 @@ angular
         var promise = categoryService.getCategories();
         promise.then(function(result){
             console.log('getCategories() - Result', result);
-            _this.students = result;
+            _this.categories = result;
         }).catch(function(error){
             console.log('getCategories() - Error Found:', error);
         }).finally(function(){
