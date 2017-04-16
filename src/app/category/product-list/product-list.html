@@ -1,0 +1,9 @@
+<div class="product-list">
+    <ul>
+        <li 
+            ng-repeat="product in $ctrl.products"
+            ng-if="product.categoryId == $ctrl.categoryx">
+            {{product.brand}}
+        </li>
+    </ul>
+</div>

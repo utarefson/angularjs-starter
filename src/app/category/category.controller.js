@@ -1,9 +1,8 @@
 angular
     .module('categoryModule')
-    .controller('categoryController', function($state) {     // Dependency Injection ($log, $scope)
+    .controller('categoryController', function($stateParams) {     // Dependency Injection ($log, $scope)
         console.log('Running Controller of categoryModule');
 
-        this.version = '1.0.0';
-
-        //$state.go('LoginPage');
+        // Here we pass the categoryId to the ProductListComponent
+        this.categoryId = $stateParams.categoryId;
     });

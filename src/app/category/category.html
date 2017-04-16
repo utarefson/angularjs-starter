@@ -1,3 +1,9 @@
 <category-menu-component></category-menu-component>
-<h1>Category</h1>
-<h3>Version: {{categoryX.version}}</h3>
+
+<h2 style="margin-left: 10px;">List of Products</h2>
+<!--<a ui-sref="AddStudent">Add Student</a>-->
+
+<div ng-controller="categoryController as controller">
+    <product-list-component categoryx="{{controller.categoryId}}">
+    </product-list-component>
+</div>

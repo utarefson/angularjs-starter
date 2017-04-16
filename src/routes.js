@@ -15,7 +15,6 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     .state('CategoryPage', {
         url: '/categories/:categoryId',
         templateUrl: 'app/category/category.html',
-        controller: 'categoryController',
-        controllerAs: 'categoryX'
+        controller: 'categoryController'
     });
 }
