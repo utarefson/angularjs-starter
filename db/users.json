@@ -9,6 +9,74 @@
       "id": 2,
       "username": "maria.lopez@gmail.com",
       "password": "maria"
+    },
+    {
+      "id": 3,
+      "username": "alucard@gmail.com",
+      "password": "admin"
+    }
+  ],
+
+  "categories": [
+    {
+      "id": 1,
+      "category": "Computers"
+    },
+    {
+      "id": 2,
+      "category": "Smartphones"
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "brand": "Dell",
+      "model": "Latitude 6430U",
+      "price": 1000
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "brand": "Hp",
+      "model": "Pavillon 1234A",
+      "price": 800
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "brand": "Lenovo",
+      "model": "T880",
+      "price": 750
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "brand": "Apple",
+      "model": "iMac 215",
+      "price": 1900
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "brand": "Toshiba",
+      "model": "TSH 123T",
+      "price": 800
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "brand": "Samsung",
+      "model": "Galaxy S2",
+      "price": 400
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "brand": "LG",
+      "model": "Nexus 5",
+      "price": 600
     }
   ]
 }

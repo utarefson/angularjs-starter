@@ -1,2 +1,2 @@
 angular
-    .module('categoryModule', []);
+    .module('categoryModule', ['ngResource']);
