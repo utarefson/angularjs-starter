@@ -1,3 +1,4 @@
+<!--
 <div class="product-list">
     <ul>
         <li 
@@ -6,4 +7,69 @@
             {{product.brand}}
         </li>
     </ul>
+</div>-->
+
+<div class="product-container">
+  <form>
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Search a Product" ng-model="searchProduct">
+      </div>      
+    </div>
+  </form>
+  
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>
+          <a href="#" ng-click="sortType = 'id'; sortReverse = !sortReverse">
+            Id
+            <span ng-show="sortType == 'id' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'id' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'brand'; sortReverse = !sortReverse">
+            Brand 
+            <span ng-show="sortType == 'brand' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'brand' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'model'; sortReverse = !sortReverse">
+            Model
+            <span ng-show="sortType == 'model' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'model' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="sortType = 'price'; sortReverse = !sortReverse">
+            Price
+            <span ng-show="sortType == 'price' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'price' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+        </td>
+        <td>
+          <a href="#">
+            Options
+          </a>
+        </td>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr ng-repeat="product in $ctrl.products | orderBy:sortType:sortReverse | filter:searchProduct"
+          ng-if="product.categoryId == $ctrl.categoryx">
+        <td>{{ product.id }}</td>
+        <td>{{ product.brand }}</td>
+        <td>{{ product.model }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+            <button ng-click="$ctrl.editFunction()">Edit</button>
+            <button ng-click="$ctrl.deleteFunction()">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>

@@ -22,6 +22,6 @@ angular
             }).finally(function(){
                 console.log('loginUser() has been finished!');
             });
-        }
+        };
     }
   });
