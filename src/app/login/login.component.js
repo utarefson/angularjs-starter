@@ -1,5 +1,5 @@
 angular
-  .module('appModule')
+  .module('loginModule')
   .component('loginComponent', {   // Use camelcase
     templateUrl: 'app/login/login.html',
     controller: function () {//courseService
