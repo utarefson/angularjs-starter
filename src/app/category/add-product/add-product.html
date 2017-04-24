@@ -1,0 +1,32 @@
+<div>
+    <h3>Add Produt</h3>
+    <form>
+        <div class="container">
+            <div>
+                <label><b>CategoryId</b></label>
+                <input type="number" 
+                    ng-model="$ctrl.product.categoryId">
+            </div>
+
+            <div>
+                <label><b>Brand</b></label>
+                <input type="text" 
+                    ng-model="$ctrl.product.brand">
+            </div>
+
+            <div>
+                <label><b>Model</b></label>
+                <input type="text" 
+                    ng-model="$ctrl.product.model">
+            </div>
+
+            <div>
+                <label><b>Price</b></label>
+                <input type="number" 
+                    ng-model="$ctrl.product.price">
+            </div>
+            
+            <button class="login-button" type="submit" ng-click="$ctrl.addFunction($ctrl.product)">Add</button>
+        </div>
+    </form>
+</div>

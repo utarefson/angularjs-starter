@@ -16,7 +16,6 @@
       "password": "admin"
     }
   ],
-
   "categories": [
     {
       "id": 1,
@@ -27,7 +26,6 @@
       "category": "Smartphones"
     }
   ],
-
   "products": [
     {
       "id": 1,
@@ -42,13 +40,6 @@
       "brand": "Hp",
       "model": "Pavillon 1234A",
       "price": 800
-    },
-    {
-      "id": 3,
-      "categoryId": 1,
-      "brand": "Lenovo",
-      "model": "T880",
-      "price": 750
     },
     {
       "id": 4,
@@ -72,11 +63,25 @@
       "price": 400
     },
     {
-      "id": 7,
+      "categoryId": 1,
+      "brand": "Lenovo",
+      "model": "T880",
+      "price": 750,
+      "id": 7
+    },
+    {
       "categoryId": 2,
       "brand": "LG",
       "model": "Nexus 5",
-      "price": 600
+      "price": 600,
+      "id": 8
+    },
+    {
+      "categoryId": 2,
+      "brand": "ioioio",
+      "model": "iouiou",
+      "price": 100,
+      "id": 10
     }
   ]
 }

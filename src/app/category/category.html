@@ -1,9 +1,18 @@
 <category-menu-component></category-menu-component>
 
-<h2 style="margin-left: 10px;">List of Products</h2>
-<!--<a ui-sref="AddStudent">Add Student</a>-->
+<div ng-controller="categoryController as controller" style="overflow: auto; width: 100%">
+    <div style="overflow: hidden; width: 100%;">
+        <h2 style="margin-left: 10px; width: 45%; float: left;">List of Products</h2>
+        <button style="margin-right: 10px; margin-top: 20px; width: 150px; float: right;"
+            ng-click="controller.addFunction()">Add Product</button>
+    </div>
 
-<div ng-controller="categoryController as controller">
-    <product-list-component categoryx="{{controller.categoryId}}">
-    </product-list-component>
+    <div>
+        <product-list-component categoryx="{{controller.categoryId}}">
+        </product-list-component>
+    </div>
+
+   <modal-dialog show="controller.addModalShown" width='500px' height='400px'>
+      <add-product-component on-addx="controller.onAddx()"></add-product-component>
+  </modal-dialog>
 </div>

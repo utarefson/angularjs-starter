@@ -66,10 +66,52 @@
         <td>{{ product.model }}</td>
         <td>{{ product.price }}</td>
         <td>
-            <button ng-click="$ctrl.editFunction()">Edit</button>
-            <button ng-click="$ctrl.deleteFunction()">Delete</button>
+            <button ng-click="$ctrl.editFunction(product)">Edit</button>
+            <button ng-click="$ctrl.deleteFunction(product)">Delete</button>
         </td>
       </tr>
     </tbody>
   </table>
+  <modal-dialog show='$ctrl.deleteModalShown' width='500px' height='20%'>
+      <p>Are you sure you want to delete this product?</p>
+      <div>
+        <button ng-click="$ctrl.cancelDeleteAction()">Cancel</button>
+        <button ng-click="$ctrl.confirmDeteleAction()">Confirm</button>
+      </div>
+  </modal-dialog>
+
+   <modal-dialog show="$ctrl.editModalShown" width='500px' height='400px'>
+      <div>
+      <h3>Edit Produt</h3>
+      <form>
+          <div class="container">
+              <div>
+                  <label><b>CategoryId</b></label>
+                  <input type="number" 
+                      ng-model="$ctrl.selectedProduct.categoryId">
+              </div>
+
+              <div>
+                  <label><b>Brand</b></label>
+                  <input type="text" 
+                      ng-model="$ctrl.selectedProduct.brand">
+              </div>
+
+              <div>
+                  <label><b>Model</b></label>
+                  <input type="text" 
+                      ng-model="$ctrl.selectedProduct.model">
+              </div>
+
+              <div>
+                  <label><b>Price</b></label>
+                  <input type="number" 
+                      ng-model="$ctrl.selectedProduct.price">
+              </div>
+              
+              <button class="login-button" type="submit" ng-click="$ctrl.editProduct()">Edit Product</button>
+          </div>
+      </form>
+  </div>
+  </modal-dialog>
 </div>
